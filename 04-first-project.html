@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 4: First Project: Simple Room | SketchUp Mastery</title>
+    <title>Module 4: First Project - Bedroom | SketchUp Mastery</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .lesson-container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08); margin: 2rem 0; overflow: hidden; border: 3px solid #00C896; }
+        .module-hero { background: linear-gradient(135deg, #00C896 0%, #00A878 100%); color: white; padding: 4rem 3rem; text-align: center; position: relative; }
+        .module-hero::before { content: '🎯'; font-size: 5rem; position: absolute; top: 1rem; right: 2rem; opacity: 0.15; }
+        .module-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: white !important; border: none !important; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+        .hero-meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+        .hero-meta-item { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 0.75rem 1.5rem; border-radius: 50px; }
+        .content-body { padding: 4rem 3rem; }
+        .milestone-badge { background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%); color: white; padding: 1rem 2rem; border-radius: 12px; text-align: center; margin: 2rem 0; box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3); }
+        @media (max-width: 768px) {
+            .lesson-container { padding: 0 1rem; }
+            .module-hero { padding: 3rem 2rem; }
+            .module-hero h1 { font-size: 2rem; }
+            .content-body { padding: 2rem 1.5rem; }
+        }
+    </style>
 </head>
 <body>
     <div class="top-progress-bar">
         <div class="progress-container">
-            <div class="progress-text">Your Learning Progress: <span id="progress-percent">0%</span></div>
-            <div class="progress-bar-outer">
-                <div class="progress-bar-inner" id="progress-bar" style="width: 0%"></div>
-            </div>
+            <div class="progress-text">Your Learning Progress: <span id="progress-percent">0%</span> • <span id="progress-modules">0 of 10 modules</span></div>
+            <div class="progress-bar-outer"><div class="progress-bar-inner" id="progress-bar" style="width: 0%"></div></div>
         </div>
     </div>
 
@@ -23,41 +39,51 @@
                 <div class="brand-icon">🏗️</div>
                 <div class="brand-text">
                     <h1>SketchUp Mastery</h1>
-                    <p class="brand-tagline">Module 4: First Project: Simple Room</p>
+                    <p class="brand-tagline">Your Complete Learning System</p>
                 </div>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">
-                    <span class="nav-icon">🏠</span>
-                    Home
-                </a>
-                <a href="PROGRESS.md" class="nav-link nav-link-cta">
-                    <span class="nav-icon">✓</span>
-                    Track Progress
-                </a>
+                <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a>
+                <a href="#" onclick="if(window.app) app.showProgressModal(); return false;" class="nav-link"><span class="nav-icon">📊</span> Progress</a>
+                <a href="PROGRESS.md" class="nav-link nav-link-cta"><span class="nav-icon">✓</span> Track Progress</a>
             </div>
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 2rem;">
+    <div class="lesson-container">
         <div class="module-nav">
-            <a href="03-essential-tools.html" class="module-nav-btn prev">
-                <span>←</span> Previous
-            </a>
-            <div class="module-title-nav">
-                <strong>Module 4 of 10</strong>
+            <a href="03-essential-tools.html" class="module-nav-btn prev"><span>←</span> Previous</a>
+            <div class="module-title-nav"><strong>Module 4 of 10 - MILESTONE PROJECT</strong></div>
+            <a href="05-advanced-modeling.html" class="module-nav-btn next">Next Module <span>→</span></a>
+        </div>
+
+        <div class="milestone-badge">
+            <h3 style="margin:0;font-size:1.5rem;">🎯 MILESTONE 1: Your First Portfolio Project!</h3>
+            <p style="margin:0.5rem 0 0 0;">By the end of this module, you'll have a complete bedroom design worth $300-500!</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="module-hero">
+                <div style="display:inline-block;background:rgba(255,255,255,0.25);padding:0.5rem 1.5rem;border-radius:50px;margin-bottom:1rem;font-weight:700;">Module 4 • Portfolio Project</div>
+                <h1>First Project: Simple Room Interior</h1>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">⏱️ 3-4 hours</div>
+                    <div class="hero-meta-item">🟡 Intermediate</div>
+                    <div class="hero-meta-item">📅 Day 7-10</div>
+                    <div class="hero-meta-item">💰 Value: $300-500</div>
+                </div>
             </div>
-            <a href="05-advanced-modeling.html" class="module-nav-btn next">
-                Next <span>→</span>
-            </a>
+            <div class="content-body">
+                <div id="module-content" class="markdown-content"></div>
+            </div>
+        </div>
+
+        <div class="module-nav" style="margin-top: 3rem;">
+            <a href="03-essential-tools.html" class="module-nav-btn prev"><span>←</span> Back to Module 3</a>
+            <div class="module-title-nav"><strong>Great Job! Continue Learning!</strong></div>
+            <a href="05-advanced-modeling.html" class="module-nav-btn next">Continue to Module 5 <span>→</span></a>
         </div>
     </div>
-
-    <main class="container">
-        <div class="markdown-content">
-            <div id="module-content"></div>
-        </div>
-    </main>
 
     <footer class="footer">
         <div class="container">
@@ -73,26 +99,24 @@
     <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
     <script src="app.js"></script>
     <script>
+        marked.setOptions({ breaks: true, gfm: true });
         fetch('04-first-project/README.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const html = marked.parse(markdown);
-                document.getElementById('module-content').innerHTML = html;
-                
-                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                checkboxes.forEach((cb, i) => {
+            .then(r => r.text())
+            .then(md => {
+                const html = marked.parse(md);
+                const content = document.getElementById('module-content');
+                content.innerHTML = html;
+                const firstH1 = content.querySelector('h1');
+                if (firstH1) firstH1.remove();
+                const cbs = content.querySelectorAll('input[type="checkbox"]');
+                cbs.forEach((cb, i) => {
                     cb.id = `m4-cb-${i}`;
                     cb.dataset.module = '4';
                     if (window.app) {
-                        const saved = app.progress.checkboxes[cb.id];
-                        if (saved) cb.checked = true;
+                        if (app.progress.checkboxes[cb.id]) cb.checked = true;
                         cb.addEventListener('change', () => app.handleCheckboxChange(cb));
                     }
                 });
-            })
-            .catch(err => {
-                document.getElementById('module-content').innerHTML = 
-                    '<div style="text-align:center;padding:3rem;"><h2>Loading...</h2><p>If content doesn\'t load, <a href="04-first-project/README.md">click here</a></p></div>';
             });
     </script>
 </body>
