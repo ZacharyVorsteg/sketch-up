@@ -501,7 +501,7 @@ body {
 }
 
 /* ========================================
-   How It Works Section
+   How It Works Section - Clear Horizontal Flow
    ======================================== */
 
 .how-it-works-section {
@@ -510,41 +510,41 @@ body {
 
 .journey-visual {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: var(--space-6);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
     margin: var(--space-10) auto;
     max-width: 1400px;
-    flex-wrap: wrap;
+    padding: 0 var(--space-6);
 }
 
 .journey-step {
-    flex: 1 1 280px;
-    min-width: 280px;
-    max-width: 320px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    background: var(--white);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
     padding: var(--space-8) var(--space-6);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
-    border: 2px solid rgba(0, 102, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.12);
+    border: 3px solid rgba(0, 102, 255, 0.15);
     position: relative;
     transition: all var(--transition-slow);
+    min-height: 400px;
 }
 
 .journey-step:hover {
-    transform: translateY(-12px);
-    box-shadow: var(--shadow-2xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 102, 255, 0.25);
     border-color: var(--primary);
 }
 
 .journey-number {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 48px;
-    height: 48px;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 56px;
     background: var(--gradient-primary);
     color: var(--white);
     border-radius: 50%;
@@ -552,48 +552,51 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: var(--text-xl);
-    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.35);
+    font-size: var(--text-2xl);
+    box-shadow: 0 6px 25px rgba(0, 102, 255, 0.45);
+    border: 4px solid white;
 }
 
 .journey-icon {
-    font-size: var(--text-5xl);
-    margin-bottom: var(--space-5);
+    font-size: 4rem;
+    margin: var(--space-6) 0 var(--space-5);
     text-align: center;
     animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
 }
 
 .journey-content {
     flex: 1;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .journey-content h3 {
     font-size: var(--text-2xl);
     margin-bottom: var(--space-4);
-    font-weight: 700;
-    line-height: 1.3;
+    font-weight: 800;
+    line-height: 1.2;
     color: var(--dark);
 }
 
 .journey-content p {
     flex: 1;
     color: #4a5568;
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: var(--text-base);
-    margin-bottom: 0;
+    margin-bottom: var(--space-5);
 }
 
 .journey-time {
-    margin-top: var(--space-5);
-    padding-top: var(--space-5);
-    border-top: 2px solid rgba(0, 102, 255, 0.1);
+    margin-top: auto;
+    padding: var(--space-4) var(--space-5);
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 200, 150, 0.08) 100%);
+    border-radius: var(--radius-md);
     font-size: var(--text-base);
     font-weight: 700;
     color: var(--primary);
@@ -601,25 +604,34 @@ body {
 }
 
 .journey-arrow {
-    font-size: var(--text-5xl);
+    font-size: 4rem;
     color: var(--primary);
     font-weight: 800;
     align-self: center;
+    flex-shrink: 0;
     animation: arrow-pulse 2s ease-in-out infinite;
+    margin: 0 -var(--space-4);
+    z-index: 10;
 }
 
 @keyframes arrow-pulse {
-    0%, 100% { transform: translateX(0); opacity: 0.6; }
-    50% { transform: translateX(10px); opacity: 1; }
+    0%, 100% { 
+        transform: translateX(0) scale(1); 
+        opacity: 0.7; 
+    }
+    50% { 
+        transform: translateX(8px) scale(1.1); 
+        opacity: 1; 
+    }
 }
 
 .what-makes-different {
     margin-top: var(--space-12);
     padding: var(--space-10) var(--space-8);
-    background: var(--white);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-xl);
-    border: 2px solid rgba(0, 102, 255, 0.08);
+    border: 3px solid rgba(0, 102, 255, 0.12);
 }
 
 .what-makes-different h3 {
@@ -627,13 +639,16 @@ body {
     font-size: var(--text-4xl);
     margin-bottom: var(--space-9);
     color: var(--dark);
-    font-weight: 800;
+    font-weight: 900;
+    letter-spacing: -0.5px;
 }
 
 .difference-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-8);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .difference-card {
@@ -641,36 +656,33 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--space-8) var(--space-6);
-    background: var(--light-gray);
+    padding: var(--space-7) var(--space-5);
+    background: white;
     border-radius: var(--radius-lg);
-    min-height: 260px;
-    transition: all var(--transition-base);
+    border: 2px solid rgba(0, 102, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.08);
+    transition: all var(--transition-slow);
 }
 
 .difference-card:hover {
-    transform: translateY(-8px);
-    background: var(--white);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    box-shadow: 0 12px 40px rgba(0, 102, 255, 0.2);
+    border-color: var(--primary);
 }
 
 .difference-icon {
-    font-size: var(--text-5xl);
+    font-size: 3.5rem;
     margin-bottom: var(--space-5);
-    animation: pulse-soft 2s ease-in-out infinite;
-}
-
-@keyframes pulse-soft {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
 }
 
 .difference-card strong {
     font-size: var(--text-xl);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     display: block;
     color: var(--dark);
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
 .difference-card p {
@@ -1586,6 +1598,29 @@ body {
     }
 }
 
+@media (max-width: 1200px) {
+    .difference-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+    }
+    
+    /* Adjust journey for tablets */
+    .journey-visual {
+        flex-wrap: wrap;
+    }
+    
+    .journey-step {
+        flex: 1 1 calc(50% - var(--space-4));
+        min-width: 280px;
+    }
+    
+    .journey-arrow:nth-of-type(2) {
+        width: 100%;
+        transform: rotate(90deg);
+        order: 5;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: var(--text-4xl);
@@ -1607,19 +1642,37 @@ body {
         font-size: var(--text-3xl);
     }
     
+    /* Stack journey steps vertically on mobile */
     .journey-visual {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: var(--space-6);
+        padding: 0 var(--space-4);
     }
     
     .journey-step {
-        max-width: 100%;
         width: 100%;
+        min-height: auto;
     }
     
     .journey-arrow {
         transform: rotate(90deg);
-        margin: var(--space-4) 0;
+        margin: var(--space-2) 0;
+        font-size: 3rem;
+    }
+    
+    /* Stack difference cards vertically on mobile */
+    .difference-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+    
+    .what-makes-different {
+        padding: var(--space-8) var(--space-5);
+    }
+    
+    .what-makes-different h3 {
+        font-size: var(--text-3xl);
     }
     
     .hero-promise {
