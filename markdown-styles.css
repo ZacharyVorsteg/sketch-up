@@ -1,0 +1,233 @@
+/* Markdown Content Styling */
+.markdown-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    line-height: 1.8;
+}
+
+.markdown-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 1rem;
+}
+
+.markdown-content h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.markdown-content h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.markdown-content h4 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.markdown-content p {
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+    font-size: 1.05rem;
+}
+
+.markdown-content strong {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.markdown-content ul, .markdown-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.markdown-content li {
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+}
+
+.markdown-content code {
+    background: #f7fafc;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #e91e63;
+    border: 1px solid #e2e8f0;
+}
+
+.markdown-content pre {
+    background: var(--dark);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-content pre code {
+    background: none;
+    color: #fff;
+    padding: 0;
+    border: none;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4a5568;
+    background: var(--light-gray);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.markdown-content th {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.markdown-content td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.markdown-content tr:last-child td {
+    border-bottom: none;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.markdown-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    margin: 3rem 0;
+}
+
+.markdown-content input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.markdown-content a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.markdown-content a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Module Navigation Styles */
+.module-nav {
+    background: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.module-nav-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.module-nav-btn.prev {
+    background: var(--light-gray);
+    color: var(--gray);
+}
+
+.module-nav-btn.next {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.module-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.module-title-nav {
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .markdown-content {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .markdown-content h1 {
+        font-size: 2rem;
+    }
+    
+    .markdown-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .module-nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .module-nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
