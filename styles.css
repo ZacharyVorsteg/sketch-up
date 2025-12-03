@@ -3269,3 +3269,292 @@ body {
     }
 }
 
+/* ========================================
+   ALIGNMENT & CONTINUITY FIXES
+   Perfect visual harmony across all pages
+   ======================================== */
+
+/* Journey Steps - Perfect Alignment */
+.journey-visual {
+    display: flex;
+    align-items: stretch !important;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.journey-step {
+    flex: 1 1 240px;
+    min-width: 240px;
+    max-width: 280px;
+    display: flex !important;
+    flex-direction: column;
+    padding: 2.5rem 2rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid rgba(0, 102, 255, 0.1) !important;
+    transition: all 0.4s ease;
+}
+
+.journey-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.journey-content h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3;
+}
+
+.journey-content p {
+    flex: 1;
+    color: #4a5568 !important;
+    line-height: 1.7 !important;
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+.journey-time {
+    margin-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 2px solid rgba(0, 102, 255, 0.1);
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+.journey-arrow {
+    font-size: 3rem !important;
+    align-self: center;
+    animation: arrow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes arrow-pulse {
+    0%, 100% { transform: translateX(0); opacity: 0.6; }
+    50% { transform: translateX(8px); opacity: 1; }
+}
+
+/* Difference Cards - Perfect Alignment */
+.what-makes-different {
+    margin-top: 5rem !important;
+    padding: 4rem 3rem !important;
+    border-radius: 24px !important;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid rgba(0, 102, 255, 0.08);
+}
+
+.what-makes-different h3 {
+    font-size: 2rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.difference-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2.5rem !important;
+    margin-top: 3rem;
+}
+
+.difference-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem !important;
+    background: var(--light-gray) !important;
+    border-radius: 16px !important;
+    min-height: 220px;
+    transition: all 0.3s ease;
+}
+
+.difference-card:hover {
+    transform: translateY(-5px);
+    background: white !important;
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.12);
+}
+
+.difference-icon {
+    font-size: 3.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.difference-card strong {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+    display: block;
+}
+
+.difference-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    color: #4a5568 !important;
+}
+
+/* Module Cards Grid - Perfect Alignment */
+.modules-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)) !important;
+    gap: 2.5rem !important;
+}
+
+.module-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+}
+
+.module-footer {
+    margin-top: auto;
+}
+
+/* Feature Cards - Perfect Alignment */
+.features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2.5rem !important;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    padding: 2.5rem 2rem !important;
+}
+
+.feature-card p {
+    flex: 1;
+}
+
+/* Phase Blocks - Consistent Spacing */
+.phase-block {
+    margin-bottom: 5rem !important;
+    padding: 3.5rem !important;
+}
+
+.phase-header {
+    margin-bottom: 3rem !important;
+    text-align: center;
+}
+
+.phase-title {
+    margin: 1.5rem 0 !important;
+}
+
+.phase-description {
+    max-width: 800px !important;
+    margin: 1rem auto !important;
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+}
+
+/* Section Spacing - Perfect Rhythm */
+.section {
+    padding: 5rem 0 !important;
+}
+
+.section-header {
+    margin-bottom: 4rem !important;
+    text-align: center;
+}
+
+.section-subtitle {
+    max-width: 700px !important;
+    margin: 1rem auto 0 !important;
+    font-size: 1.15rem !important;
+}
+
+/* Container Consistency */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+}
+
+/* Module Navigation - Perfect Alignment */
+.module-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 2rem 3rem !important;
+    gap: 2rem;
+}
+
+.module-title-nav {
+    text-align: center;
+    flex: 1;
+}
+
+/* Timeline - Perfect Alignment */
+.timeline-content {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Stats - Perfect Alignment */
+.hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+    gap: 2rem !important;
+    max-width: 900px;
+    margin: 0 auto 3rem !important;
+}
+
+.stat {
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Project Details - Perfect Grid */
+.project-details {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1rem !important;
+}
+
+.project-item {
+    min-height: 70px;
+    align-items: center !important;
+}
+
+/* Mobile Alignment Fixes */
+@media (max-width: 768px) {
+    .journey-visual {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .journey-step {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .journey-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+    
+    .difference-grid,
+    .features-grid,
+    .modules-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .module-nav {
+        flex-direction: column;
+        padding: 1.5rem !important;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
