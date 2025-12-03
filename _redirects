@@ -1,0 +1,28 @@
+# Netlify Redirects for SketchUp Mastery Course
+# https://docs.netlify.com/routing/redirects/
+
+# Pretty URLs for markdown files
+/getting-started                /01-getting-started/README.md       200
+/navigation                     /02-navigation/README.md            200
+/essential-tools                /03-essential-tools/README.md       200
+/first-project                  /04-first-project/README.md         200
+/advanced-modeling              /05-advanced-modeling/README.md     200
+/materials-textures             /06-materials-textures/README.md    200
+/second-project                 /07-second-project/README.md        200
+/layers-organization            /08-layers-organization/README.md   200
+/extensions                     /09-extensions/README.md            200
+/going-professional             /10-going-professional/README.md    200
+
+# Progress tracker
+/progress                       /PROGRESS.md                        200
+/track                          /PROGRESS.md                        200
+
+# Keyboard shortcuts
+/shortcuts                      /01-getting-started/keyboard-shortcuts-cheatsheet.md  200
+
+# Root redirects
+/README                         /README.md                          200
+
+# Fallback to home for any unmatched routes
+/*                              /index.html                         200
+
