@@ -280,7 +280,7 @@
                     <p class="phase-description">Start here! By the end of Week 1, you'll have created your first 3D objects and understand how SketchUp works.</p>
                 </div>
                 <div class="modules-grid">
-                    <a href="01-getting-started/README.md" class="module-card">
+                    <a href="01-getting-started/README.md" class="module-card" data-module-num="1">
                         <div class="module-header">
                             <div class="module-number">Day 1</div>
                             <div class="module-badge start-here">👈 START HERE</div>
@@ -742,7 +742,17 @@
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    <!-- SVG Gradient for Progress Circle -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00C896;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+    
+    <script src="app.js"></script>
 </body>
 </html>
 
