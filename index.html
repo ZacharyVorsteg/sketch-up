@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Complete SketchUp Mastery Course - From Complete Beginner to Professional Designer. Learn 3D modeling, interior design, and start charging clients.">
-    <title>SketchUp Mastery Course - Complete Guide from Beginner to Professional</title>
+    <title>SketchUp Mastery Course - Your Step-by-Step Journey to Professional Designer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Progress Bar at Top -->
+    <div class="top-progress-bar">
+        <div class="progress-container">
+            <div class="progress-text">Your Learning Progress: <span id="progress-percent">0%</span></div>
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>🏗️ SketchUp Mastery</h1>
+                <div class="brand-icon">🏗️</div>
+                <div class="brand-text">
+                    <h1>SketchUp Mastery</h1>
+                    <p class="brand-tagline">Your Complete Learning System</p>
+                </div>
             </div>
             <div class="nav-links">
-                <a href="#modules">Modules</a>
-                <a href="#about">About</a>
-                <a href="PROGRESS.md">Track Progress</a>
+                <a href="#how-it-works" class="nav-link">
+                    <span class="nav-icon">📖</span>
+                    How It Works
+                </a>
+                <a href="#modules" class="nav-link">
+                    <span class="nav-icon">🎓</span>
+                    Modules
+                </a>
+                <a href="PROGRESS.md" class="nav-link nav-link-cta">
+                    <span class="nav-icon">✓</span>
+                    Track Progress
+                </a>
             </div>
         </div>
     </nav>
@@ -25,34 +48,161 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Master SketchUp</h1>
-                <h2 class="hero-subtitle">From Complete Beginner to Professional Designer</h2>
+                <div class="hero-badge">✨ Complete Learning System</div>
+                <h1 class="hero-title">You're About to Become a<br><span class="gradient-text">SketchUp Designer</span></h1>
+                <h2 class="hero-subtitle">Zero Experience Required • Step-by-Step Guidance • Real Career Skills</h2>
                 <p class="hero-description">
-                    A comprehensive, step-by-step course that teaches you not just HOW, but WHY. 
-                    Walk away with real skills, portfolio pieces, and the ability to charge clients.
+                    <strong>Here's the truth:</strong> In just 30 hours, you'll go from "What is SketchUp?" to creating professional designs that clients pay for. Every single step is explained. Every question answered. Your hand is held the entire way.
                 </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">10</div>
-                        <div class="stat-label">Modules</div>
+                
+                <div class="hero-promise">
+                    <div class="promise-item">
+                        <div class="promise-icon">🎯</div>
+                        <div class="promise-text">
+                            <strong>Clear Success Metrics</strong>
+                            <p>You'll know exactly when you've mastered each skill</p>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label">Hours</div>
+                    <div class="promise-item">
+                        <div class="promise-icon">🗺️</div>
+                        <div class="promise-text">
+                            <strong>Complete Roadmap</strong>
+                            <p>Every step mapped out in perfect order</p>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Major Projects</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Practical</div>
+                    <div class="promise-item">
+                        <div class="promise-icon">💼</div>
+                        <div class="promise-text">
+                            <strong>Career Ready</strong>
+                            <p>Learn to charge $75-150/hour for your work</p>
+                        </div>
                     </div>
                 </div>
-                <a href="#modules" class="cta-button">Start Learning →</a>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Clear Modules</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Focused Hours</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">🎨</div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Portfolio Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Income Potential</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta-group">
+                    <a href="#how-it-works" class="cta-button cta-primary">
+                        <span class="cta-icon">👉</span>
+                        See How It Works
+                    </a>
+                    <a href="01-getting-started/README.md" class="cta-button cta-secondary">
+                        <span class="cta-icon">🚀</span>
+                        Jump to Module 1
+                    </a>
+                </div>
+                
+                <p class="hero-reassurance">
+                    ⭐ Designed for complete beginners • No prior design experience needed • Self-paced learning
+                </p>
             </div>
         </div>
     </header>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How This Course Works</h2>
+                <p class="section-subtitle">Your clear, step-by-step path from Day 1 to professional designer</p>
+            </div>
+
+            <div class="journey-visual">
+                <div class="journey-step">
+                    <div class="journey-number">1</div>
+                    <div class="journey-content">
+                        <div class="journey-icon">📥</div>
+                        <h3>Start Right Now</h3>
+                        <p>Open Module 1. No account needed. No software yet. Just start reading and learning.</p>
+                        <div class="journey-time">⏱️ 5 minutes to begin</div>
+                    </div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="journey-step">
+                    <div class="journey-number">2</div>
+                    <div class="journey-content">
+                        <div class="journey-icon">🎯</div>
+                        <h3>Follow Each Module</h3>
+                        <p>Complete modules 1-10 in order. Each builds on the previous. Clear checkboxes show your progress.</p>
+                        <div class="journey-time">⏱️ 2-4 weeks total</div>
+                    </div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="journey-step">
+                    <div class="journey-number">3</div>
+                    <div class="journey-content">
+                        <div class="journey-icon">🎨</div>
+                        <h3>Build Real Projects</h3>
+                        <p>Create 2 portfolio-ready designs: a bedroom and a kitchen. These are what you'll show clients.</p>
+                        <div class="journey-time">⏱️ 7-10 hours combined</div>
+                    </div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="journey-step">
+                    <div class="journey-number">4</div>
+                    <div class="journey-content">
+                        <div class="journey-icon">💼</div>
+                        <h3>Start Earning</h3>
+                        <p>Module 10 teaches pricing, finding clients, and running your business. You'll be ready!</p>
+                        <div class="journey-time">💰 $500-1500 first project</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="what-makes-different">
+                <h3>What Makes This Different From YouTube Tutorials?</h3>
+                <div class="difference-grid">
+                    <div class="difference-card">
+                        <div class="difference-icon">✅</div>
+                        <strong>Complete System</strong>
+                        <p>Every topic covered in perfect order. No gaps or confusion.</p>
+                    </div>
+                    <div class="difference-card">
+                        <div class="difference-icon">✅</div>
+                        <strong>Success Checkpoints</strong>
+                        <p>Know exactly when you've mastered each skill with clear checkboxes.</p>
+                    </div>
+                    <div class="difference-card">
+                        <div class="difference-icon">✅</div>
+                        <strong>The WHY Explained</strong>
+                        <p>Understand reasoning behind every technique. Become a designer, not a button-clicker.</p>
+                    </div>
+                    <div class="difference-card">
+                        <div class="difference-icon">✅</div>
+                        <strong>Business Training</strong>
+                        <p>Learn to price services, find clients, and earn income—not just model.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="about" class="section about-section">
         <div class="container">
@@ -94,134 +244,414 @@
 
     <section id="modules" class="section modules-section">
         <div class="container">
-            <h2 class="section-title">Course Modules</h2>
-            <p class="section-subtitle">Follow in order for the best learning experience</p>
+            <div class="section-header">
+                <h2 class="section-title">Your 10-Module Learning Path</h2>
+                <p class="section-subtitle">Follow these in order. Each module includes clear success checkpoints so you know when you're ready to continue.</p>
+            </div>
+
+            <div class="learning-path-visual">
+                <div class="path-progress">
+                    <div class="path-step completed"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step milestone"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step milestone"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step"></div>
+                    <div class="path-line"></div>
+                    <div class="path-step milestone"></div>
+                </div>
+            </div>
             
             <div class="phase-block">
-                <h3 class="phase-title">Phase 1: Foundation (Hours 1-5)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge phase-1">Week 1</div>
+                    <h3 class="phase-title">Foundation: Your First Steps</h3>
+                    <p class="phase-description">Start here! By the end of Week 1, you'll have created your first 3D objects and understand how SketchUp works.</p>
+                </div>
                 <div class="modules-grid">
                     <a href="01-getting-started/README.md" class="module-card">
-                        <div class="module-number">Module 1</div>
-                        <h4>Getting Started</h4>
-                        <p>Installation, setup, interface tour, and your first 3D object</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 1</div>
+                            <div class="module-badge start-here">👈 START HERE</div>
+                        </div>
+                        <h4>Module 1: Getting Started</h4>
+                        <p>Install SketchUp, understand the interface, and create your very first 3D shape!</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Today's Win:</strong> You'll see a 3D cube that YOU created
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 1-2 hours</span>
-                            <span class="difficulty beginner">🟢 Beginner</span>
+                            <span class="time"><span class="icon">⏱️</span> 1-2 hours</span>
+                            <span class="difficulty beginner"><span class="icon">🟢</span> Complete Beginner</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>You'll Learn:</strong>
+                                <ul>
+                                    <li>✓ Download & install (like Instagram!)</li>
+                                    <li>✓ Understand every button</li>
+                                    <li>✓ Create first 3D object</li>
+                                    <li>✓ Feel confident to continue</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
 
             <div class="phase-block">
-                <h3 class="phase-title">Phase 2: Core Skills (Hours 6-12)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge phase-2">Week 2</div>
+                    <h3 class="phase-title">Core Skills: Building Your Foundation</h3>
+                    <p class="phase-description">Learn the essential tools and complete your first real project—a bedroom you'll be proud to show!</p>
+                </div>
                 <div class="modules-grid">
                     <a href="02-navigation/README.md" class="module-card">
-                        <div class="module-number">Module 2</div>
-                        <h4>Navigation & Movement</h4>
-                        <p>Master camera controls and navigate like a professional</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 2-3</div>
+                        </div>
+                        <h4>Module 2: Navigation & Movement</h4>
+                        <p>Learn to move around your 3D space like you're walking through it. This becomes automatic!</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Orbiting your model without thinking
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 2-3 hours</span>
-                            <span class="difficulty beginner">🟢 Beginner</span>
+                            <span class="time"><span class="icon">⏱️</span> 2-3 hours</span>
+                            <span class="difficulty beginner"><span class="icon">🟢</span> Beginner</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>You'll Master:</strong>
+                                <ul>
+                                    <li>✓ Camera controls (smooth and natural)</li>
+                                    <li>✓ Viewing from any angle</li>
+                                    <li>✓ Navigation shortcuts</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
 
                     <a href="03-essential-tools/README.md" class="module-card">
-                        <div class="module-number">Module 3</div>
-                        <h4>Essential Tools</h4>
-                        <p>Learn all 12 core modeling tools and when to use each one</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 4-6</div>
+                        </div>
+                        <h4>Module 3: Essential Tools</h4>
+                        <p>All 12 core tools explained with WHY and WHEN to use each. This is your modeling foundation!</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Creating shapes without thinking about which tool to use
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 4-6 hours</span>
-                            <span class="difficulty intermediate">🟡 Beginner/Intermediate</span>
+                            <span class="time"><span class="icon">⏱️</span> 4-6 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Beginner+</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>You'll Master:</strong>
+                                <ul>
+                                    <li>✓ Line, Rectangle, Circle tools</li>
+                                    <li>✓ Push/Pull (the magic tool!)</li>
+                                    <li>✓ Move, Rotate, Scale</li>
+                                    <li>✓ When to use each one</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
 
                     <a href="04-first-project/README.md" class="module-card highlight">
-                        <div class="module-number">Module 4</div>
-                        <h4>First Project: Simple Room</h4>
-                        <p>Create a complete bedroom interior from scratch</p>
-                        <div class="module-meta">
-                            <span class="time">⏱️ 3-4 hours</span>
-                            <span class="difficulty intermediate">🟡 Intermediate</span>
+                        <div class="module-header">
+                            <div class="module-number">Day 7-10</div>
+                            <div class="module-badge milestone">🎯 MILESTONE 1</div>
                         </div>
-                        <div class="project-badge">Portfolio Project</div>
+                        <h4>Module 4: First Project—Bedroom Interior</h4>
+                        <p>Your first complete portfolio piece! Create a beautiful bedroom with furniture, materials, and professional presentation.</p>
+                        
+                        <div class="success-preview big-win">
+                            <strong>🎉 YOUR BIG WIN:</strong> A complete room design you can show people and say "I made this!"
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-item">
+                                <span class="project-icon">🏠</span>
+                                <span>Full room with walls, floor, ceiling</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">🛏️</span>
+                                <span>Furniture: bed, nightstand</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">🎨</span>
+                                <span>Materials: wood floors, painted walls</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">📸</span>
+                                <span>5-8 professional presentation images</span>
+                            </div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span class="time"><span class="icon">⏱️</span> 3-4 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Intermediate</span>
+                        </div>
+                        
+                        <div class="module-value">
+                            <strong>💼 Real-World Value:</strong> This type of project: $300-500 when you start charging clients
+                        </div>
                     </a>
                 </div>
             </div>
 
             <div class="phase-block">
-                <h3 class="phase-title">Phase 3: Intermediate Skills (Hours 13-20)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge phase-3">Week 3-4</div>
+                    <h3 class="phase-title">Professional Techniques: Level Up Your Skills</h3>
+                    <p class="phase-description">Learn pro workflows and create your portfolio showpiece—a complete kitchen design!</p>
+                </div>
                 <div class="modules-grid">
                     <a href="05-advanced-modeling/README.md" class="module-card">
-                        <div class="module-number">Module 5</div>
-                        <h4>Advanced Modeling</h4>
-                        <p>Groups, components, solid tools, and complex shapes</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 11-13</div>
+                        </div>
+                        <h4>Module 5: Advanced Modeling</h4>
+                        <p>Professional workflows: components that update everywhere, reusable libraries, and smart organization.</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Edit one window, all 20 windows update automatically!
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 3-4 hours</span>
-                            <span class="difficulty intermediate">🟡 Intermediate</span>
+                            <span class="time"><span class="icon">⏱️</span> 3-4 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Intermediate</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>Pro Skills You'll Learn:</strong>
+                                <ul>
+                                    <li>✓ Components (edit once, update all)</li>
+                                    <li>✓ Boolean operations (union, subtract)</li>
+                                    <li>✓ Model organization that scales</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
 
                     <a href="06-materials-textures/README.md" class="module-card">
-                        <div class="module-number">Module 6</div>
-                        <h4>Materials & Textures</h4>
-                        <p>Create photorealistic materials and master texture application</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 14-15</div>
+                        </div>
+                        <h4>Module 6: Materials & Textures</h4>
+                        <p>Make your models photorealistic! Learn texture scaling, custom materials, and professional finishes.</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Wood that looks like real wood, not a texture stretched wrong
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 2-3 hours</span>
-                            <span class="difficulty intermediate">🟡 Intermediate</span>
+                            <span class="time"><span class="icon">⏱️</span> 2-3 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Intermediate</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>You'll Master:</strong>
+                                <ul>
+                                    <li>✓ Applying materials correctly</li>
+                                    <li>✓ Scaling textures realistically</li>
+                                    <li>✓ Creating custom materials</li>
+                                    <li>✓ Glass, metal, wood finishes</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
 
                     <a href="07-second-project/README.md" class="module-card highlight">
-                        <div class="module-number">Module 7</div>
-                        <h4>Second Project: Modern Kitchen</h4>
-                        <p>Design a complete kitchen worth $500-1500 in client work</p>
-                        <div class="module-meta">
-                            <span class="time">⏱️ 4-6 hours</span>
-                            <span class="difficulty advanced">🔴 Intermediate/Advanced</span>
+                        <div class="module-header">
+                            <div class="module-number">Day 16-21</div>
+                            <div class="module-badge milestone">🏆 MILESTONE 2</div>
                         </div>
-                        <div class="project-badge">Portfolio Project</div>
+                        <h4>Module 7: Second Project—Modern Kitchen</h4>
+                        <p>Your portfolio showpiece! A complete professional kitchen design worth $500-1500 when you start charging.</p>
+                        
+                        <div class="success-preview big-win">
+                            <strong>🏆 YOUR SHOWPIECE:</strong> A stunning kitchen that makes people say "WOW, you made that?"
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-item">
+                                <span class="project-icon">🏠</span>
+                                <span>Complete L-shaped kitchen layout</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">🗄️</span>
+                                <span>Base & wall cabinets with hardware</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">⚡</span>
+                                <span>Appliances: range, fridge, dishwasher</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">💎</span>
+                                <span>Countertops, backsplash, all details</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">📸</span>
+                                <span>10+ professional presentation images</span>
+                            </div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span class="time"><span class="icon">⏱️</span> 4-6 hours</span>
+                            <span class="difficulty advanced"><span class="icon">🔴</span> Advanced</span>
+                        </div>
+                        
+                        <div class="module-value">
+                            <strong>💼 Real-World Value:</strong> Professional kitchen designs: $800-1500 per project
+                        </div>
                     </a>
                 </div>
             </div>
 
             <div class="phase-block">
-                <h3 class="phase-title">Phase 4: Professional Skills (Hours 21-25)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge phase-4">Week 4</div>
+                    <h3 class="phase-title">Power User: Work Like a Pro</h3>
+                    <p class="phase-description">Learn professional organization and 10X your speed with extensions.</p>
+                </div>
                 <div class="modules-grid">
                     <a href="08-layers-organization/README.md" class="module-card">
-                        <div class="module-number">Module 8</div>
-                        <h4>Layers & Organization</h4>
-                        <p>Manage complex projects with professional file organization</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 22-23</div>
+                        </div>
+                        <h4>Module 8: Layers & Organization</h4>
+                        <p>Manage complex projects like a pro. Keep files organized, find anything instantly, work efficiently.</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Managing a 100-object project without confusion
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 2-3 hours</span>
-                            <span class="difficulty intermediate">🟡 Intermediate</span>
+                            <span class="time"><span class="icon">⏱️</span> 2-3 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Intermediate</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>Pro Organization:</strong>
+                                <ul>
+                                    <li>✓ Layer system (show/hide by type)</li>
+                                    <li>✓ Scenes (save views instantly)</li>
+                                    <li>✓ File management</li>
+                                    <li>✓ Templates for fast starts</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
 
                     <a href="09-extensions/README.md" class="module-card">
-                        <div class="module-number">Module 9</div>
-                        <h4>Extensions & Plugins</h4>
-                        <p>10X your speed with game-changing extensions</p>
+                        <div class="module-header">
+                            <div class="module-number">Day 24-25</div>
+                        </div>
+                        <h4>Module 9: Extensions & Plugins</h4>
+                        <p>Supercharge SketchUp! Learn which extensions save hours and how to use them like a power user.</p>
+                        
+                        <div class="success-preview">
+                            <strong>✨ Success Looks Like:</strong> Creating stairs in 30 seconds (not 30 minutes!)
+                        </div>
+                        
                         <div class="module-meta">
-                            <span class="time">⏱️ 2-3 hours</span>
-                            <span class="difficulty intermediate">🟡 Intermediate</span>
+                            <span class="time"><span class="icon">⏱️</span> 2-3 hours</span>
+                            <span class="difficulty intermediate"><span class="icon">🟡</span> Intermediate</span>
+                        </div>
+                        
+                        <div class="module-footer">
+                            <div class="what-youll-do">
+                                <strong>Time-Saving Extensions:</strong>
+                                <ul>
+                                    <li>✓ Install essential extensions</li>
+                                    <li>✓ 10X faster workflows</li>
+                                    <li>✓ Professional toolkit</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="phase-block">
-                <h3 class="phase-title">Phase 5: Business & Career (Hours 26-30)</h3>
+            <div class="phase-block final-phase">
+                <div class="phase-header">
+                    <div class="phase-badge phase-5">Week 5</div>
+                    <h3 class="phase-title">Launch Your Career: Start Earning!</h3>
+                    <p class="phase-description">Transform your skills into income. Learn pricing, finding clients, and running your design business.</p>
+                </div>
                 <div class="modules-grid">
-                    <a href="10-going-professional/README.md" class="module-card highlight">
-                        <div class="module-number">Module 10</div>
-                        <h4>Going Professional</h4>
-                        <p>Portfolio, pricing, finding clients, and building your business</p>
-                        <div class="module-meta">
-                            <span class="time">⏱️ 3-4 hours</span>
-                            <span class="difficulty professional">⭐ Professional</span>
+                    <a href="10-going-professional/README.md" class="module-card highlight business-module">
+                        <div class="module-header">
+                            <div class="module-number">Day 26-30</div>
+                            <div class="module-badge milestone">💰 BUSINESS LAUNCH</div>
                         </div>
-                        <div class="project-badge">Business Ready</div>
+                        <h4>Module 10: Going Professional</h4>
+                        <p>The business module! Portfolio creation, pricing strategies, finding clients, and getting paid for your work.</p>
+                        
+                        <div class="success-preview big-win">
+                            <strong>🚀 YOUR CAREER LAUNCH:</strong> Ready to charge $75-150/hour and find your first client!
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-item">
+                                <span class="project-icon">💼</span>
+                                <span>Build professional portfolio</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">💵</span>
+                                <span>Set pricing ($75-150/hour)</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">🎯</span>
+                                <span>Find first clients (5 strategies)</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">📋</span>
+                                <span>Contracts & legal basics</span>
+                            </div>
+                            <div class="project-item">
+                                <span class="project-icon">📈</span>
+                                <span>Scale your business</span>
+                            </div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span class="time"><span class="icon">⏱️</span> 3-4 hours</span>
+                            <span class="difficulty professional"><span class="icon">⭐</span> Professional</span>
+                        </div>
+                        
+                        <div class="module-value business-value">
+                            <strong>💰 After This Module:</strong> You're ready to charge clients and earn $500-1500 per project
+                        </div>
                     </a>
+                </div>
+                
+                <div class="completion-celebration">
+                    <h3>🎉 Course Complete! You're Now a Professional SketchUp Designer!</h3>
+                    <p>You went from zero to professional in 30 hours. That's incredible! Now go build your career! 🚀</p>
                 </div>
             </div>
         </div>
@@ -311,6 +741,8 @@
             </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
 
