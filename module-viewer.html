@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SketchUp Mastery - Module Content</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Markdown CSS for beautiful rendering -->
+    <style>
+        .markdown-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.8;
+        }
+        
+        .markdown-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        
+        .markdown-content h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .markdown-content h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .markdown-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .markdown-content strong {
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .markdown-content ul, .markdown-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .markdown-content li {
+            margin-bottom: 0.75rem;
+            color: var(--gray);
+        }
+        
+        .markdown-content code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e91e63;
+        }
+        
+        .markdown-content pre {
+            background: var(--dark);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        .markdown-content pre code {
+            background: none;
+            color: #fff;
+            padding: 0;
+        }
+        
+        .markdown-content blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--gray);
+            background: var(--light-gray);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .markdown-content th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .markdown-content td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .markdown-content tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .markdown-content hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 3rem 0;
+        }
+        
+        /* Interactive Checkboxes in Content */
+        .markdown-content input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+        
+        .markdown-content input[type="checkbox"]:checked + label,
+        .markdown-content li:has(input[type="checkbox"]:checked) {
+            color: var(--gray);
+            opacity: 0.7;
+        }
+        
+        .markdown-content input[type="checkbox"]:checked::after {
+            content: ' ✓';
+            color: var(--primary);
+            font-weight: 800;
+        }
+        
+        /* Special Content Boxes */
+        .success-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 4px solid #4caf50;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 4px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-left: 4px solid #9c27b0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        /* Module Navigation */
+        .module-nav {
+            position: sticky;
+            top: 80px;
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+        }
+        
+        .module-nav-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .module-nav-btn.prev {
+            background: var(--light-gray);
+            color: var(--gray);
+        }
+        
+        .module-nav-btn.next {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .module-nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .module-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .module-progress-sidebar {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 250px;
+        }
+        
+        .module-progress-sidebar h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+        }
+        
+        .progress-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+        
+        .progress-icon.complete {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .progress-icon.current {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .progress-icon.locked {
+            background: #e0e0e0;
+            color: #999;
+        }
+        
+        /* Loading State */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            gap: 1rem;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--light-gray);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .markdown-content {
+                padding: 1rem;
+            }
+            
+            .module-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .module-progress-sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Progress Bar -->
+    <div class="top-progress-bar">
+        <div class="progress-container">
+            <div class="progress-text">Your Learning Progress: <span id="progress-percent">0%</span></div>
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="brand-icon">🏗️</div>
+                <div class="brand-text">
+                    <h1>SketchUp Mastery</h1>
+                    <p class="brand-tagline">Your Complete Learning System</p>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    Home
+                </a>
+                <a href="#" onclick="app.showProgressModal(); return false;" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    Progress
+                </a>
+                <a href="/PROGRESS.md" class="nav-link nav-link-cta">
+                    <span class="nav-icon">✓</span>
+                    Track Progress
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Module Navigation -->
+    <div class="container">
+        <div class="module-nav">
+            <a href="#" id="prev-module" class="module-nav-btn prev">
+                <span>←</span> Previous Module
+            </a>
+            <div class="module-title-nav">
+                <strong id="current-module-title">Loading...</strong>
+            </div>
+            <a href="#" id="next-module" class="module-nav-btn next">
+                Next Module <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div id="content-wrapper" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading module content...</p>
+        </div>
+        
+        <div id="markdown-content" class="markdown-content" style="display: none;">
+            <!-- Markdown content will be rendered here -->
+        </div>
+    </main>
+
+    <!-- Module Progress Sidebar -->
+    <div class="module-progress-sidebar" id="progress-sidebar">
+        <h4>Course Progress</h4>
+        <div id="sidebar-modules"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SketchUp Mastery Course</h4>
+                    <p>Interactive learning for aspiring designers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Course Home</a></li>
+                        <li><a href="/PROGRESS.md">Progress Tracker</a></li>
+                        <li><a href="/01-getting-started/keyboard-shortcuts-cheatsheet.md">Shortcuts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SketchUp Mastery Course. Created with ❤️ for aspiring designers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SVG Gradient -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00C896;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Marked.js for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    
+    <!-- Main Application Script -->
+    <script src="/app.js"></script>
+    
+    <!-- Module Viewer Script -->
+    <script>
+        // Module Viewer Application
+        class ModuleViewer {
+            constructor() {
+                this.currentModuleNum = this.getModuleNumberFromURL();
+                this.currentModulePath = this.getModulePathFromURL();
+                this.init();
+            }
+
+            init() {
+                this.setupMarked();
+                this.loadModuleContent();
+                this.setupNavigation();
+                this.setupProgressSidebar();
+            }
+
+            setupMarked() {
+                // Configure marked for better rendering
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    headerIds: true,
+                    mangle: false
+                });
+            }
+
+            getModuleNumberFromURL() {
+                const path = window.location.pathname;
+                const match = path.match(/\/(\d+)-/);
+                return match ? parseInt(match[1]) : null;
+            }
+
+            getModulePathFromURL() {
+                const path = window.location.pathname;
+                if (path.includes('README.md')) {
+                    return path;
+                }
+                // If no file specified, assume README.md
+                const dir = path.substring(0, path.lastIndexOf('/') + 1);
+                return dir + 'README.md';
+            }
+
+            async loadModuleContent() {
+                try {
+                    const response = await fetch(this.currentModulePath);
+                    if (!response.ok) throw new Error('Module not found');
+                    
+                    const markdown = await response.text();
+                    this.renderMarkdown(markdown);
+                    this.enhanceContent();
+                    this.hideLoading();
+                } catch (error) {
+                    console.error('Error loading module:', error);
+                    this.showError();
+                }
+            }
+
+            renderMarkdown(markdown) {
+                const html = marked.parse(markdown);
+                const contentDiv = document.getElementById('markdown-content');
+                contentDiv.innerHTML = html;
+                
+                // Enhance special elements
+                this.enhanceSpecialBoxes(contentDiv);
+                this.enhanceCheckboxes(contentDiv);
+                this.enhanceTables(contentDiv);
+            }
+
+            enhanceSpecialBoxes(container) {
+                // Convert blockquotes with special prefixes to styled boxes
+                const blockquotes = container.querySelectorAll('blockquote');
+                blockquotes.forEach(bq => {
+                    const text = bq.textContent;
+                    if (text.startsWith('✨')) {
+                        bq.className = 'success-box';
+                    } else if (text.startsWith('⚠️')) {
+                        bq.className = 'warning-box';
+                    } else if (text.startsWith('💡')) {
+                        bq.className = 'tip-box';
+                    } else if (text.startsWith('ℹ️')) {
+                        bq.className = 'info-box';
+                    }
+                });
+            }
+
+            enhanceCheckboxes(container) {
+                const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach((checkbox, index) => {
+                    checkbox.id = checkbox.id || `checkbox-m${this.currentModuleNum}-${index}`;
+                    checkbox.dataset.module = this.currentModuleNum;
+                    checkbox.dataset.checkboxId = checkbox.id;
+                    
+                    // Load saved state
+                    if (app && app.progress && app.progress.checkboxes[checkbox.id]) {
+                        checkbox.checked = true;
+                    }
+                    
+                    // Add change listener
+                    checkbox.addEventListener('change', (e) => {
+                        if (app && app.handleCheckboxChange) {
+                            app.handleCheckboxChange(e.target);
+                        }
+                    });
+                });
+            }
+
+            enhanceTables(container) {
+                const tables = container.querySelectorAll('table');
+                tables.forEach(table => {
+                    table.classList.add('enhanced-table');
+                });
+            }
+
+            enhanceContent() {
+                const contentDiv = document.getElementById('markdown-content');
+                
+                // Add smooth scroll to anchor links
+                const links = contentDiv.querySelectorAll('a[href^="#"]');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(link.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+
+                // Add copy buttons to code blocks
+                const codeBlocks = contentDiv.querySelectorAll('pre code');
+                codeBlocks.forEach(block => {
+                    const button = document.createElement('button');
+                    button.className = 'copy-code-btn';
+                    button.textContent = 'Copy';
+                    button.style.cssText = 'position:absolute;top:0.5rem;right:0.5rem;padding:0.25rem 0.75rem;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:0.75rem;';
+                    
+                    block.parentElement.style.position = 'relative';
+                    block.parentElement.appendChild(button);
+                    
+                    button.addEventListener('click', () => {
+                        navigator.clipboard.writeText(block.textContent);
+                        button.textContent = 'Copied!';
+                        setTimeout(() => button.textContent = 'Copy', 2000);
+                    });
+                });
+            }
+
+            setupNavigation() {
+                const prevBtn = document.getElementById('prev-module');
+                const nextBtn = document.getElementById('next-module');
+                const titleDiv = document.getElementById('current-module-title');
+
+                // Set current module title
+                titleDiv.textContent = `Module ${this.currentModuleNum}`;
+
+                // Setup previous button
+                if (this.currentModuleNum > 1) {
+                    const prevNum = this.currentModuleNum - 1;
+                    prevBtn.href = `/${this.getModulePath(prevNum)}`;
+                } else {
+                    prevBtn.style.visibility = 'hidden';
+                }
+
+                // Setup next button
+                if (this.currentModuleNum < 10) {
+                    const nextNum = this.currentModuleNum + 1;
+                    nextBtn.href = `/${this.getModulePath(nextNum)}`;
+                } else {
+                    nextBtn.textContent = 'Back to Home';
+                    nextBtn.href = '/index.html';
+                }
+            }
+
+            getModulePath(moduleNum) {
+                const modulePaths = {
+                    1: '01-getting-started/README.md',
+                    2: '02-navigation/README.md',
+                    3: '03-essential-tools/README.md',
+                    4: '04-first-project/README.md',
+                    5: '05-advanced-modeling/README.md',
+                    6: '06-materials-textures/README.md',
+                    7: '07-second-project/README.md',
+                    8: '08-layers-organization/README.md',
+                    9: '09-extensions/README.md',
+                    10: '10-going-professional/README.md'
+                };
+                return modulePaths[moduleNum];
+            }
+
+            setupProgressSidebar() {
+                const sidebar = document.getElementById('sidebar-modules');
+                if (!sidebar || !app) return;
+
+                let html = '';
+                for (let i = 1; i <= 10; i++) {
+                    const isComplete = app.progress.completedModules.includes(i);
+                    const isCurrent = i === this.currentModuleNum;
+                    const iconClass = isComplete ? 'complete' : isCurrent ? 'current' : 'locked';
+                    const icon = isComplete ? '✓' : isCurrent ? '▶' : '○';
+
+                    html += `
+                        <div class="progress-item">
+                            <div class="progress-icon ${iconClass}">${icon}</div>
+                            <span>Module ${i}</span>
+                        </div>
+                    `;
+                }
+                sidebar.innerHTML = html;
+            }
+
+            hideLoading() {
+                document.getElementById('content-wrapper').style.display = 'none';
+                document.getElementById('markdown-content').style.display = 'block';
+            }
+
+            showError() {
+                const wrapper = document.getElementById('content-wrapper');
+                wrapper.innerHTML = `
+                    <div style="text-align: center; padding: 3rem;">
+                        <h2>⚠️ Module Not Found</h2>
+                        <p>Sorry, we couldn't load this module content.</p>
+                        <a href="/index.html" class="cta-button">Return to Home</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewer = new ModuleViewer();
+        });
+    </script>
+</body>
+</html>
+
